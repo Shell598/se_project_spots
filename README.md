@@ -12,6 +12,8 @@ This project is targeting a social media site that is responsive on different de
 
 This webpage is linked to github pages
 
+https://shell598.github.io/se_project_spots/
+
 ### Overview
 
 - Intro
