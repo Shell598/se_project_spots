@@ -1,12 +1,12 @@
 .profile {
   display: flex;
-  padding: 0 15px 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  padding: 0 0 20px;
 }
 
 .profile__avatar {
   margin-right: 20px;
-  border-radius: 15px;
+  border-radius: 8px;
   width: 190px;
   height: 190px;
 }
@@ -47,25 +47,26 @@
 }
 
 .profile__edit-btn {
-  background-color: #fcf5e5;
+  display: flex;
+  background-color: transparent;
   border: none;
   margin-top: auto;
   padding: 0;
   width: 107.43px;
   height: 16px;
+  gap: 8px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1;
   font-size: 16px;
-  color: rgba(33, 33, 33, 1);
+  color: #212121;
+  opacity: 70%;
 }
 
-.profile__edit-btn {
+.profile__edit-btn:hover {
   cursor: pointer;
-}
-
-.profile__pen {
-  margin-right: 8px;
+  color: #212121;
+  opacity: 1;
 }
 
 .profile__add-btn {
@@ -85,6 +86,8 @@
 
 .profile__add-btn:hover {
   cursor: pointer;
+  background-color: #212121;
+  opacity: 80%;
 }
 
 .profile__plus {
