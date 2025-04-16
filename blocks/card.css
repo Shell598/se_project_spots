@@ -5,6 +5,10 @@
   display: block;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__content {
   display: flex;
   justify-content: space-between;
@@ -27,6 +31,10 @@
   height: 20px;
   background-color: transparent;
   opacity: 40%;
+}
+
+.card__like-btn:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 320px) {
