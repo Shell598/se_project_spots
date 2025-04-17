@@ -1,7 +1,8 @@
 .profile {
+  margin: auto;
   display: flex;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
-  padding: 0 0 20px;
+  padding: 20px 0;
 }
 
 .profile__avatar {
@@ -65,7 +66,6 @@
 
 .profile__edit-btn:hover {
   cursor: pointer;
-  color: #212121;
   opacity: 1;
 }
 
@@ -86,7 +86,6 @@
 
 .profile__add-btn:hover {
   cursor: pointer;
-  background-color: #212121;
   opacity: 80%;
 }
 
@@ -96,7 +95,7 @@
 
 @media screen and (max-width: 627px) {
   .profile {
-    margin: 0;
+    margin: auto;
     padding: 20px 120px 12px;
     flex-direction: column;
     max-width: 280px;
