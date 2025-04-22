@@ -95,8 +95,6 @@
 
 @media screen and (max-width: 627px) {
   .profile {
-    margin: auto;
-    padding: 20px 120px 12px;
     flex-direction: column;
     max-width: 280px;
     align-items: center;
@@ -104,6 +102,7 @@
   }
 
   .profile__avatar {
+    margin: 0;
     width: 80px;
     height: 80px;
   }
