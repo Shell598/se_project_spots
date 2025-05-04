@@ -16,7 +16,7 @@ https://shell598.github.io/se_project_spots/
 
 ### Overview
 
-<video controls src="video__spots.mp4" title="My project Spots"></video>
+https://drive.google.com/file/d/1hp6Lzz1wqWkv9zRbAJiTYLzYFBwCrEn8/view?usp=drive_link
 
 - Intro
 - Figma
