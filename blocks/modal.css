@@ -42,6 +42,7 @@
   top: 32px;
   right: 50px;
   padding: 0;
+  background: url(../images/close-icon.svg) center no-repeat;
   opacity: 40%;
   color: rgba(33, 33, 33, 0.4);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -54,6 +55,7 @@
   cursor: pointer;
   color: rgba(33, 33, 33, 1);
   transition: 0.5s ease;
+  opacity: 1;
 }
 
 .modal__form {
@@ -97,6 +99,7 @@
 .modal__submit-btn:hover {
  cursor: pointer;
   opacity: 80%;
+  transition: .3s ease;
 }
 
 .modal__input::placeholder {
