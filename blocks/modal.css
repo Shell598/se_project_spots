@@ -126,6 +126,7 @@
   }
 
   .modal__form {
+    width: 300;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -133,7 +134,7 @@
   }
 
   .modal__input {
-    width: 276px;
+    width: 96%;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
