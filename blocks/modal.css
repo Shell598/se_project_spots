@@ -82,6 +82,7 @@
   border-radius: 8px;
   padding: 8px;
   border-color: rgba(33, 33, 33, 0.4);
+  box-sizing: border-box;
 }
 
 .modal__input:hover {
@@ -126,7 +127,6 @@
   }
 
   .modal__form {
-    width: 300;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -134,7 +134,8 @@
   }
 
   .modal__input {
-    width: 96%;
+    box-sizing: border-box;
+    width: 100%;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
