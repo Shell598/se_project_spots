@@ -22,22 +22,24 @@ const newPostCaptionInput = newPostModal.querySelector("#post-caption-input");
 const newPostImageEl = document.querySelector("#new-image-input");
 const newPostCaptionel = document.querySelector("#post-caption-input");
 
+const closeButtons = document.querySelectorAll(".modal__close-btn");
+closeButtons.forEach((button) => {
+  const popup = button.closest(".modal");
+  button.addEventListener("click", () => closeModal(popup));
+});
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
   editProfileModal.classList.add("modal_is-opened");
 });
 
-editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
-});
-
 newPostBtn.addEventListener("click", function () {
   newPostModal.classList.add("modal_is-opened");
-});
-
-newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
 });
 
 function handleEditProfileSubmit(evt) {
