@@ -116,7 +116,6 @@
   .modal__container {
     margin: 0;
     padding: 12px 12px;
-    gap: 24px;
   }
 
   .modal__title {
@@ -128,14 +127,20 @@
   }
 
   .modal__form {
-    gap: 24px;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
   }
 
-
+  .modal__input {
+    padding: 8px;
+    padding-left: 8px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+  }
 
   .modal__submit-btn {
     width: 100%;
@@ -146,7 +151,7 @@
   }
 
   .modal__close-btn {
-    top: 8px;
-    right: 10px;
+    top: 0;
+    right: 0px;
   }
 }
