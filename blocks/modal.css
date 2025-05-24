@@ -17,6 +17,7 @@
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
+  
 }
 
 .modal__container {
@@ -78,7 +79,7 @@
   padding: 8px;
   border-color: rgba(33, 33, 33, 0.4);
   box-sizing: border-box;
-   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;

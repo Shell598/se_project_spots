@@ -53,6 +53,7 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
+  console.log("New post submitted");
   newPostModal.classList.remove("modal_is-opened");
 }
 
