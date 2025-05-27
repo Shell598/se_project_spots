@@ -20,7 +20,7 @@ const newPostImageInput = newPostModal.querySelector("#new-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#post-caption-input");
 
 const newPostImageEl = document.querySelector("#new-image-input");
-const newPostCaptionel = document.querySelector("#post-caption-input");
+const newPostCaptionEl = document.querySelector("#post-caption-input");
 
 const closeButtons = document.querySelectorAll(".modal__close-btn");
 closeButtons.forEach((button) => {
@@ -53,7 +53,7 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  console.log("New post submitted");
+  console.log("newPostImageInput", "newPostCaptionInput");
   newPostModal.classList.remove("modal_is-opened");
 }
 
