@@ -38,10 +38,6 @@ editProfileBtn.addEventListener("click", function () {
   editProfileModal.classList.add("modal_is-opened");
 });
 
-newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
-});
-
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
@@ -50,6 +46,10 @@ function handleEditProfileSubmit(evt) {
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+
+newPostBtn.addEventListener("click", function () {
+  newPostModal.classList.add("modal_is-opened");
+});
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
