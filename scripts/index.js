@@ -53,7 +53,7 @@ newPostBtn.addEventListener("click", function () {
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  console.log("newPostImageInput", "newPostCaptionInput");
+  console.log(newPostImageInput.value , newPostCaptionInput.value);
   newPostModal.classList.remove("modal_is-opened");
 }
 
