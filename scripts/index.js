@@ -103,6 +103,8 @@ function handleNewPostSubmit(evt) {
 
   const cardEl = getCardEl(inputValues);
   cardsList.prepend(cardEl);
+  console.log(newPostCaptionInput.value);
+  console.log(newPostImageInput.value);
 }
 const previewModal = document.querySelector("#preview__modal");
 const previewModalCloseBtnEl = previewModal.querySelector(
