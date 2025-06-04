@@ -1,5 +1,9 @@
+.card {
+ position: relative;
+}
+
 .cards {
-  padding: 20px 0;
+   padding: 20px 0;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
