@@ -96,16 +96,20 @@ function handleNewPostSubmit(evt) {
   evt.preventDefault();
   closeModal(newPostModal);
 
-  const inputValues = {
-    name: newPostCaptionInput.value,
-    link: newPostImageInput.value,
+ const inputValues = {
+    name: "",
+    link: "",
   };
 
   const cardEl = getCardEl(inputValues);
   cardsList.prepend(cardEl);
-  console.log(newPostCaptionInput.value);
-  console.log(newPostImageInput.value);
-}
+
+
+  newPostForm.reset();
+
+  closeModal(newPostModal);
+  };
+
 const previewModal = document.querySelector("#preview__modal");
 const previewModalCloseBtnEl = previewModal.querySelector(
   ".modal__close-btn_type_preview"
@@ -135,12 +139,9 @@ function getCardEl(data) {
     openModal(previewModal);
   });
 
-  previewModalCloseBtnEl
-
 const cardDeleteBtnEl = cardEl.querySelector(".card__delete-btn");
 cardDeleteBtnEl.addEventListener("click", () => {
   cardEl.remove();
-  cardEl = null;
 });
 
 return cardEl;
