@@ -59,7 +59,7 @@ const initialCards = [
   },
 ];
 
-const closeButtons = document.querySelectorAll(".modal__close-btn, .modal__close-btn_type_preview");
+const closeButtons = document.querySelectorAll(".modal__close-btn");
 closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closeModal(popup));

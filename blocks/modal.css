@@ -125,7 +125,7 @@
   object-fit: contain;
   display: block;
   border-radius: 8px;
-  padding: 0 0 8px
+  padding: 0 0 8px;
 }
 
 .modal__caption {
@@ -197,7 +197,7 @@
   }
 
   .modal__image {
-max-width: unset;
+max-width: 90vw;
   }
 
   .modal__caption {
