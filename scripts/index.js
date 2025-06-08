@@ -97,8 +97,8 @@ function handleNewPostSubmit(evt) {
   closeModal(newPostModal);
 
  const inputValues = {
-    name: "",
-    link: "",
+    name: newPostCaptionInput.value,
+    link: newPostImageInput.value,
   };
 
   const cardEl = getCardEl(inputValues);
