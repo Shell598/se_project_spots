@@ -9,6 +9,8 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
 
+
+
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
@@ -16,6 +18,7 @@ const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const buttonEl = newPostModal.querySelector(".modal__submit-btn");
 const newPostImageInput = newPostModal.querySelector("#new-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#post-caption-input");
 
@@ -70,6 +73,7 @@ function openModal(modal) {
 }
 
 function closeModal(modal) {
+
   modal.classList.remove("modal_is-opened");
 }
 
@@ -96,19 +100,17 @@ function handleNewPostSubmit(evt) {
   evt.preventDefault();
   closeModal(newPostModal);
 
- const inputValues = {
+  const inputValues = {
     name: newPostCaptionInput.value,
     link: newPostImageInput.value,
   };
 
   const cardEl = getCardEl(inputValues);
   cardsList.prepend(cardEl);
-
-
   newPostForm.reset();
-
+  disabledButton(buttonEl, settings);
   closeModal(newPostModal);
-  };
+}
 
 const previewModal = document.querySelector("#preview__modal");
 const previewModalCloseBtnEl = previewModal.querySelector(
@@ -139,15 +141,24 @@ function getCardEl(data) {
     openModal(previewModal);
   });
 
-const cardDeleteBtnEl = cardEl.querySelector(".card__delete-btn");
-cardDeleteBtnEl.addEventListener("click", () => {
-  cardEl.remove();
-});
+  const cardDeleteBtnEl = cardEl.querySelector(".card__delete-btn");
+  cardDeleteBtnEl.addEventListener("click", () => {
+    cardEl.remove();
+  });
 
-return cardEl;
+  return cardEl;
 }
 initialCards.forEach(function (item) {
   const cardEl = getCardEl(item);
   cardsList.append(cardEl);
 });
 
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const openModal = document.querySelector(".modal_is-opened");
+        if (openModal) {
+            closeModal(openModal);
+        }
+    }
+});
