@@ -21,10 +21,6 @@ const buttonEl = newPostModal.querySelector(".modal__submit-btn");
 const newPostImageInput = newPostModal.querySelector("#new-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#post-caption-input");
 
-const newPostImageEl = document.querySelector("#new-image-input");
-
-const newPostCaptionEl = document.querySelector("#post-caption-input");
-
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
@@ -68,9 +64,34 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", () => closeModal(popup));
 });
 
+
+  document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("modal")) {
+    closeModal
+     const openModal = document.querySelector(".modal_is-opened");
+     if (openModal) {
+    closeModal(openModal);
+  document.removeEventListener("click", function (event) {
+  }
+  )};
+}});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape"){
+  const openModal = document.querySelector(".modal_is-opened");
+  if (openModal) {
+    closeModal(openModal);
+     document.removeEventListener("keydown", function(event) {
+    });
+  };
+  };
+});
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
+
+
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
@@ -148,16 +169,7 @@ function getCardEl(data) {
 
   return cardEl;
 }
-initialCards.forEach(function (item) {
-  const cardEl = getCardEl(item);
+initialCards.forEach(function(item) {
+  const cardEl = getCardEl(item)
   cardsList.append(cardEl);
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    const openModal = document.querySelector(".modal_is-opened");
-    if (openModal) {
-      closeModal(openModal);
-    }
-  }
 });
