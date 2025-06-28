@@ -17,7 +17,7 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
 
-const buttonEl = newPostModal.querySelector(".modal__submit-btn");
+const modalSubmitButtonEl = newPostModal.querySelector(".modal__submit-btn");
 const newPostImageInput = newPostModal.querySelector("#new-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#post-caption-input");
 
@@ -64,18 +64,17 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", () => closeModal(popup));
 });
 
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+      modal.removeEventListener("click", evt);
+    }
+  });
+});
 
-  document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("modal")) {
-    closeModal
-     const openModal = document.querySelector(".modal_is-opened");
-     if (openModal) {
-    closeModal(openModal);
-  document.removeEventListener("click", function (event) {
-  }
-  )};
-}});
-
+//lost on this. looks the same except handleEscKey instead of function(event)
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape"){
   const openModal = document.querySelector(".modal_is-opened");
@@ -90,8 +89,6 @@ document.addEventListener("keydown", function (event) {
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
-
-
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
@@ -128,7 +125,7 @@ function handleNewPostSubmit(evt) {
   const cardEl = getCardEl(inputValues);
   cardsList.prepend(cardEl);
   newPostForm.reset();
-  disabledButton(buttonEl, settings);
+  disabledButton(modalSubmitButtonEl, settings);
   closeModal(newPostModal);
 }
 
@@ -169,7 +166,7 @@ function getCardEl(data) {
 
   return cardEl;
 }
-initialCards.forEach(function(item) {
-  const cardEl = getCardEl(item)
+initialCards.forEach(function (item) {
+  const cardEl = getCardEl(item);
   cardsList.append(cardEl);
 });

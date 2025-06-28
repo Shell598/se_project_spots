@@ -4,7 +4,7 @@ const settings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_inactive",
   inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible"
+  errorClass: "modal__error_visible",
 };
 
 const showInputError = (inputEl, config) => {
@@ -33,35 +33,33 @@ const hasInvalidInput = (inputList, config) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonEl, config) => {
+const toggleButtonState = (inputList,  modalSubmitButtonEl, config) => {
   if (hasInvalidInput(inputList)) {
-    disabledButton(buttonEl, config);
+    disabledButton( modalSubmitButtonEl, config);
   } else {
-    buttonEl.classList.remove(config.inactiveButtonClass);
-    buttonEl.disabled = false;
+     modalSubmitButtonEl.classList.remove(config.inactiveButtonClass);
+     modalSubmitButtonEl.disabled = false;
   }
 };
 
-const disabledButton = (buttonEl, config) => {
-  buttonEl.classList.add(config.inactiveButtonClass);
-  buttonEl.disabled = true;
+const disabledButton = ( modalSubmitButtonEl, config) => {
+   modalSubmitButtonEl.classList.add(config.inactiveButtonClass);
+   modalSubmitButtonEl.disabled = true;
 };
 
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
-  const buttonEl = formEl.querySelector(config.submitButtonSelector);
+  const  modalSubmitButtonEl = formEl.querySelector(config.submitButtonSelector);
 
-  toggleButtonState(inputList, buttonEl, config);
+  toggleButtonState(inputList,  modalSubmitButtonEl, config);
 
   inputList.forEach((inputEl, congif) => {
     inputEl.addEventListener("input", function () {
-      checkInputValidity(inputEl,  config);
-      toggleButtonState(inputList, buttonEl, config);
+      checkInputValidity(inputEl, config);
+      toggleButtonState(inputList,  modalSubmitButtonEl, config);
     });
   });
 };
-
-
 
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
@@ -71,4 +69,3 @@ const enableValidation = (config) => {
 };
 
 enableValidation(settings);
-
