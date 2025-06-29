@@ -74,9 +74,10 @@ modals.forEach((modal) => {
   });
 });
 
-//lost on this. looks the same except handleEscKey instead of function(event)
+
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape"){
+
   const openModal = document.querySelector(".modal_is-opened");
   if (openModal) {
     closeModal(openModal);
