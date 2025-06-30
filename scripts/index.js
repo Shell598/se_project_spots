@@ -74,18 +74,16 @@ modals.forEach((modal) => {
   });
 });
 
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape"){
-
-  const openModal = document.querySelector(".modal_is-opened");
-  if (openModal) {
-    closeModal(openModal);
-     document.removeEventListener("keydown", function(event) {
-    });
+function handleEscKey(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is-opened");
+    if (openModal) {
+      closeModal(openModal);
+    };
   };
-  };
-});
+};
+
+document.addEventListener("keydown", handleEscKey);
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
