@@ -40,7 +40,7 @@ const toggleButtonState = (inputList,  modalSubmitButtonEl, config) => {
      modalSubmitButtonEl.classList.remove(config.inactiveButtonClass);
      modalSubmitButtonEl.disabled = false;
   }
-};
+};~
 
 const disabledButton = ( modalSubmitButtonEl, config) => {
    modalSubmitButtonEl.classList.add(config.inactiveButtonClass);

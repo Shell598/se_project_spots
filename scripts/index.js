@@ -78,9 +78,9 @@ function handleEscKey(evt) {
     const openModal = document.querySelector(".modal_is-opened");
     if (openModal) {
       closeModal(openModal);
-    };
-  };
-};
+    }
+  }
+}
 
 document.addEventListener("keydown", handleEscKey);
 
