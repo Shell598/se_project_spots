@@ -82,14 +82,14 @@ function handleEscKey(evt) {
   }
 }
 
-document.addEventListener("keydown", handleEscKey);
-
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscKey);
 }
 
 editProfileBtn.addEventListener("click", function () {
